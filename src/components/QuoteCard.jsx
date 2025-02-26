@@ -17,7 +17,7 @@ const QuoteCard = ({ quote, author }) => {
   }, [quote]);
 
   return (
-    <div className="border p-5 rounded-xl">
+    <div className={`border p-5 ${quote.length > 75 ? "border-red-500" : "border-green-500"} rounded-xl`}>
       <div>
         {`"${displayedQuote}"`}
       </div>
